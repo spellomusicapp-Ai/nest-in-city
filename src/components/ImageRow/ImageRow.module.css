@@ -1,0 +1,26 @@
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--row-gap, 23px);
+  width: 100%;
+}
+
+.row > * {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .row {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    justify-content: flex-start;
+    padding-bottom: 4px;
+  }
+
+  .row > * {
+    flex: 0 0 78%;
+    scroll-snap-align: start;
+  }
+}

@@ -1,0 +1,36 @@
+.quote {
+  margin: 0;
+}
+
+.mark {
+  background: var(--color-highlight);
+  color: var(--color-text-heading);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  padding: 0 2px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.cta,
+.ctaPlaceholder {
+  display: inline-block;
+  background: var(--color-highlight);
+  color: var(--color-text-ink);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  text-decoration: none;
+  padding: 0 4px;
+}
+
+.cta {
+  cursor: pointer;
+}
+
+.ctaPlaceholder {
+  cursor: default;
+  opacity: 0.6;
+}

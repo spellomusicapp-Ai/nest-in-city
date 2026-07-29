@@ -1,0 +1,108 @@
+.wrap {
+  position: relative;
+  width: 100%;
+}
+
+.track {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x proximity;
+  scroll-behavior: smooth;
+  cursor: grab;
+  touch-action: pan-x;
+  user-select: none;
+  -webkit-overflow-scrolling: touch;
+
+  /* Hide the native scrollbar — the dots below are the only indicator. */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+.track:active {
+  cursor: grabbing;
+}
+
+.item {
+  flex: 0 0 auto;
+  /* Desktop default: ~3 cards per view, slightly wider than a strict
+     3-per-800px split for more breathing room (a sliver of the next
+     card may peek at the edge — expected/fine in a scrollable row). */
+  width: calc((100% - 24px) / 2.7);
+  /* One shared height sized for the longest card content so every card
+     is identical rather than shrinking/growing per description length. */
+  height: 340px;
+  scroll-snap-align: start;
+}
+
+.fadeLeft,
+.fadeRight {
+  position: absolute;
+  top: 0;
+  bottom: 16px;
+  width: 56px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.fadeLeft {
+  left: 0;
+  background: linear-gradient(to right, var(--color-bg), rgba(255, 255, 255, 0));
+}
+
+.fadeRight {
+  right: 0;
+  background: linear-gradient(to left, var(--color-bg), rgba(255, 255, 255, 0));
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background: var(--color-border-image-olive);
+  opacity: 0.45;
+  transition: opacity 0.15s var(--ease-standard), transform 0.15s var(--ease-standard);
+}
+
+.dot:hover {
+  opacity: 0.75;
+}
+
+.dotActive {
+  opacity: 1;
+  background: var(--color-text-heading);
+  transform: scale(1.3);
+}
+
+@media (max-width: 1024px) {
+  .item {
+    width: min(360px, 68vw);
+    height: 340px;
+  }
+}
+
+@media (max-width: 768px) {
+  .item {
+    width: min(320px, 78vw);
+    height: 340px;
+  }
+  .fadeLeft,
+  .fadeRight {
+    width: 32px;
+  }
+}

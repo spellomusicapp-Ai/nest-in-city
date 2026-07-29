@@ -1,0 +1,36 @@
+.section {
+  padding: 68px 0 90px;
+  border-bottom: 1px solid var(--color-divider);
+  scroll-margin-top: 100px;
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.column {
+  max-width: var(--content-width);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.kicker {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--fs-section-label);
+  line-height: var(--lh-body);
+  color: var(--color-text-body);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .section {
+    scroll-margin-top: 120px;
+  }
+}

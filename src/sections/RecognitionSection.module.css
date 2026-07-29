@@ -1,0 +1,18 @@
+/* The Figma design has this carousel span the full sidebar+content width
+   (1080px), since each section there carries its own repeated sidebar
+   snapshot. Our sidebar is a single persistent sticky element instead (one
+   real nav, not 8 frozen copies), so breaking all the way into its column
+   would render on top of live navigation. We instead reclaim only the
+   127px gap between sidebar and content — as wide as we can go without
+   ever covering the sidebar itself. */
+.breakout {
+  width: calc(var(--sidebar-gap) + var(--content-width));
+  margin-left: calc(-1 * var(--sidebar-gap));
+}
+
+@media (max-width: 768px) {
+  .breakout {
+    width: 100%;
+    margin-left: 0;
+  }
+}

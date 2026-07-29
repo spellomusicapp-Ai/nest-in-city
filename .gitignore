@@ -1,0 +1,38 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Kept locally for reference, but the connected GitHub token lacks the
+# `workflow` OAuth scope needed to push files under .github/workflows/.
+.github/workflows
+
+# Orphaned media from earlier iterations, not referenced by any component.
+# Kept on disk per explicit request — never delete these, just don't publish them.
+public/assets/images/3.jpg
+public/assets/images/Bezalel Pagmar-239.jpg
+public/assets/images/process-00.jpg
+public/assets/images/process-002.jpg
+public/assets/images/process-003.jpg
+public/assets/images/process-06.jpg
+public/assets/images/process-07.png.jpg
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

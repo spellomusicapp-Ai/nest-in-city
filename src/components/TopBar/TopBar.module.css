@@ -1,0 +1,72 @@
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-bg);
+  border-bottom: 0.3px solid var(--color-divider-strong);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 89px;
+  padding: 0 120px;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  border: none;
+  background: none;
+  padding: 0;
+  color: var(--color-text-heading);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.progressTrack {
+  width: 123px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--color-card-bg-1);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--color-text-heading);
+  transition: width 0.1s linear;
+}
+
+.tag {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--color-text-heading);
+  white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+  .row {
+    padding: 0 var(--side-padding-tablet);
+  }
+  .progressTrack {
+    width: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    padding: 0 var(--side-padding-mobile);
+    height: 64px;
+  }
+  .progressTrack {
+    width: 48px;
+  }
+  .tag {
+    font-size: 14px;
+  }
+}

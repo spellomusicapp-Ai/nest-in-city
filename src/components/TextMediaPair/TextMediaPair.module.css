@@ -1,0 +1,19 @@
+.pair {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 23px;
+  width: 100%;
+}
+
+.text {
+  flex: 1 1 300px;
+  min-width: 200px;
+  margin: 0;
+}
+
+.media {
+  flex: 0 0 343px;
+  width: 343px;
+  max-width: 100%;
+}

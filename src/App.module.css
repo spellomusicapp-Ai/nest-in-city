@@ -1,0 +1,39 @@
+.page {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  background: var(--color-bg);
+}
+
+.layout {
+  display: flex;
+  gap: var(--sidebar-gap);
+  padding: 0 var(--side-padding);
+}
+
+.main {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: var(--content-width);
+}
+
+@media (max-width: 1024px) {
+  .layout {
+    padding: 0 var(--side-padding-tablet);
+  }
+
+  .main {
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+  }
+
+  .main {
+    padding: 0 var(--side-padding-mobile);
+  }
+}

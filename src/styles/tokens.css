@@ -1,0 +1,66 @@
+:root {
+  /* Colors */
+  --color-bg: #ffffff;
+  --color-text-heading: #000000;
+  --color-text-body: #555555;
+  --color-text-ink: #1d1d19; /* bold/emphasis spans within body copy */
+  --color-divider: rgba(131, 131, 112, 0.33);
+  --color-divider-strong: #838370;
+  --color-border-image-pink: #fff1f1;
+  --color-border-image-olive: #b6b4ab;
+  --color-highlight: #fff186;
+  --color-card-bg-1: #f1f1f1;
+  --color-card-bg-2: #eff0f1;
+  --color-card-bg-3: #edefef;
+  --color-card-bg-4: #f2f2f2;
+  --color-card-text-navy: #1e2b3b;
+
+  /* Fonts */
+  --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Fraunces', Georgia, serif; /* substitute for Figma's "Tobias" */
+
+  /* Type scale (desktop) */
+  --fs-hero: 68px;
+  --fs-hero-sub: 20px;
+  --fs-section-label: 18px;
+  --fs-body: 18px;
+  --fs-caption: 16px;
+  --fs-subheading: 24px;
+  --fs-press-brand: 32px;
+  --fs-press-tag: 18px;
+  --fs-press-desc: 12px;
+
+  --lh-body: 30px;
+  --lh-caption: 26px;
+  --lh-subheading: 32px;
+
+  /* Layout */
+  --page-max-width: 1440px;
+  --side-padding: 180px;
+  --side-padding-tablet: 64px;
+  --side-padding-mobile: 24px;
+  --sidebar-width: 153px;
+  --sidebar-gap: 127px;
+  --content-width: 800px;
+  --section-padding-top: 68px;
+  --section-padding-bottom: 68px;
+
+  /* Radii */
+  --radius-image: 24px;
+  --radius-card: 20px;
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* At tablet widths the fixed 153+127 sidebar reservation leaves too little
+   room for content (image rows shrink to illegible thumbnails) — scale the
+   sidebar down instead of the content. Every component reads these same
+   custom properties, so this single override keeps them all in sync. */
+@media (max-width: 1024px) {
+  :root {
+    --sidebar-width: 110px;
+    --sidebar-gap: 48px;
+  }
+}
+
