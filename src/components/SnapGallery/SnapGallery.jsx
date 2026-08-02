@@ -3,10 +3,10 @@ import { asset } from '../../utils/asset';
 import styles from './SnapGallery.module.css';
 
 /**
- * Content-column-width horizontal gallery: scroll-snap, edge fades,
- * centered pagination dots, and no arrows. Mouse drag + native
- * trackpad/touch scrolling both work; vertical page scroll is never
- * hijacked (touch-action: pan-x).
+ * Content-column-width horizontal gallery: scroll-snap, centered
+ * pagination dots, and no arrows. Mouse drag + native trackpad/touch
+ * scrolling both work; vertical page scroll is never hijacked
+ * (touch-action: pan-x).
  */
 export default function SnapGallery({ images, ratio = 387 / 396, border = 'pink', size = 'compact' }) {
   const trackRef = useRef(null);
@@ -85,9 +85,6 @@ export default function SnapGallery({ images, ratio = 387 / 396, border = 'pink'
 
   return (
     <div className={`${styles.wrap} ${size === 'large' ? styles.large : ''}`}>
-      <div className={styles.fadeLeft} aria-hidden="true" />
-      <div className={styles.fadeRight} aria-hidden="true" />
-
       <div
         ref={trackRef}
         className={styles.track}
