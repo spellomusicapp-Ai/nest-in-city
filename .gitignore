@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
+.vite
 
 # Kept locally for reference, but the connected GitHub token lacks the
 # `workflow` OAuth scope needed to push files under .github/workflows/.

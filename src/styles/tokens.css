@@ -14,6 +14,9 @@
   --color-card-bg-3: #edefef;
   --color-card-bg-4: #f2f2f2;
   --color-card-text-navy: #1e2b3b;
+  /* No blue previously existed anywhere in this project — added for the
+     Digital Extension / "Digital website" links per explicit request. */
+  --color-link-blue: #2563eb;
 
   /* Fonts */
   --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;

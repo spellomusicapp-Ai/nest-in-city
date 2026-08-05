@@ -19,7 +19,7 @@ export function HighlightQuote({ children }) {
 }
 
 /**
- * Yellow-highlighter CTA. Renders a plain, visually-identical placeholder
+ * Bold blue link CTA. Renders a plain, visually-identical placeholder
  * when `href` is falsy so the real URL can be dropped in later with zero
  * markup changes.
  */
@@ -32,7 +32,7 @@ export function HighlightCTA({ href, children }) {
     );
   }
   return (
-    <a className={styles.cta} href={href} target="_blank" rel="noreferrer">
+    <a className={styles.cta} href={href} target="_blank" rel="noopener noreferrer">
       {children}
     </a>
   );

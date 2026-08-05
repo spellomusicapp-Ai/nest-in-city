@@ -1,5 +1,6 @@
 // Central place for external / placeholder links so they're a one-line edit later.
 export const LINKS = {
-  // No URL yet — DigitalExtensionCTA renders a disabled-style placeholder until this is set.
-  websiteConcept: null,
+  // The digital-extension concept site — also linked from the top nav's
+  // "Digital website" tag.
+  websiteConcept: 'https://spellomusicapp-ai.github.io/nestincity-website/contact.html',
 };

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { LINKS } from '../../data/links';
 import styles from './TopBar.module.css';
 
 export default function TopBar() {
@@ -41,7 +42,14 @@ export default function TopBar() {
         <div className={styles.progressTrack}>
           <div className={styles.progressFill} style={{ width: `${progress}%` }} />
         </div>
-        <span className={styles.tag}>Digital website</span>
+        <a
+          className={styles.tag}
+          href={LINKS.websiteConcept}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Digital website
+        </a>
       </div>
     </header>
   );
